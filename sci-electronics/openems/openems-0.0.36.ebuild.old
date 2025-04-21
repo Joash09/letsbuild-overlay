@@ -1,0 +1,37 @@
+EAPI=8
+
+inherit git-r3 cmake
+ 
+DESCRIPTION="openEMS - a free and open electromagnetic field solver"
+HOMEPAGE="https://www.openems.de/"
+EGIT_SUBMODULES=('fparser' 'CSXCAD' 'openEMS')
+EGIT_REPO_URI="https://github.com/thliebig/openEMS-Project.git"
+EGIT_COMMIT="v${PVR}"
+
+LICENSE="GPL-3"
+SLOT="0"
+KEYWORDS="~amd64"
+IUSE=""
+ 
+DEPEND=""
+BDEPEND="dev-libs/tinyxml
+dev-build/cmake
+sci-libs/hdf5
+sci-libs/vtk[qt6,boost]
+sci-mathematics/cgal
+dev-qt/qtbase
+dev-qt/qt5compat
+"
+RDEPEND="${DEPEND}"
+
+src_configure() {
+
+	local mycmakeargs=(
+		-DBUILD_APPCSXCAD=NO
+		-DCMAKE_INSTALL_PREFIX="${D}"
+		-DFPARSER_ROOT_DIR="${D}"
+		-DCSXCAD_ROOT_DIR="${D}"
+	)
+
+	cmake_src_configure
+}
