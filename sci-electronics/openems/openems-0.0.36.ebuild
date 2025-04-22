@@ -10,6 +10,7 @@ HOMEPAGE="https://www.openems.de/"
 EGIT_REPO_URI="https://github.com/thliebig/openEMS"
 EGIT_COMMIT="v${PVR}"
 
+DISTUTILS_USE_PEP517=setuptools
 DISTUTILS_OPTIONAL=1
 DISTUTILS_EXT=1
 
@@ -25,9 +26,7 @@ BDEPEND="dev-libs/tinyxml
 dev-build/cmake
 sci-libs/hdf5
 sci-mathematics/cgal
-dev-qt/qtbase
-dev-qt/qt5compat
-sci-electroncis/csxcad[python?]
+sci-electronics/csxcad[python?]
 python? (
 	${PYTHON_DEPS}
 	${DISTUTILS_DEPS}
