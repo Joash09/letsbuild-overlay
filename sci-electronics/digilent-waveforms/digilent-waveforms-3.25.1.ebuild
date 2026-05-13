@@ -24,7 +24,6 @@ dev-qt/qtdeclarative
 dev-qt/qtserialport
 "
 DEPEND=""
-RDEPEND="${DEPEND}"
 BDEPEND="app-arch/rpm2targz"
 
 S="${WORKDIR}"
