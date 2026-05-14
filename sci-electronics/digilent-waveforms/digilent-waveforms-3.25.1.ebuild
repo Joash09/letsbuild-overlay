@@ -7,7 +7,7 @@ inherit desktop xdg-utils rpm
 
 DESCRIPTION="WaveForms virutal instrument suite for Diligent Test and Measurement devices"
 HOMEPAGE="https://cloud.digilent.com/"
-SRC_URI="https://files.digilent.com/Software/Waveforms/${PV}/digilent.waveforms_${PV}.aarch64.rpm"
+SRC_URI="https://files.digilent.com/Software/Waveforms/${PV}/digilent.waveforms_${PV}.x86_64.rpm"
 
 LICENSE="Digilent-EULA"
 SLOT=0
