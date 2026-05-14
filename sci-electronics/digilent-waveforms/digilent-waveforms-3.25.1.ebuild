@@ -17,8 +17,7 @@ IUSE=""
 # Depends: libc6 (>=2.35), xdg-utils, digilent.adept.runtime (>=2.27.9), libgl1-mesa-dri, libqt6core6, libqt6widgets6, libqt6multimedia6, libqt6qml6, libqt6serialport6
 
 RDEPEND="sci-electronics/digilent-adept-runtime
-dev-qt/qtcore
-dev-qt/qtwidgets
+dev-qt/qtbase[gui,widgets]
 dev-qt/qtmultimedia
 dev-qt/qtdeclarative
 dev-qt/qtserialport
